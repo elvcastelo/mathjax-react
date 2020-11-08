@@ -1,0 +1,26 @@
+{
+  "name": "react-mathjax",
+  "version": "0.1.0",
+  "description": "Implementation of MathJax using React",
+  "scripts": {
+    "build": "babel src -d lib"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "load-script": "^1.0.0"
+  },
+  "keywords": [
+    "react",
+    "mathjax"
+  ],
+  "author": "",
+  "license": "MIT"
+}
