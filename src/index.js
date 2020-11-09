@@ -1,4 +1,5 @@
 import Context from './Context'
+import Node from './Node'
 
-export { Context }
-export default { Context }
+export { Context, Node }
+export default { Context, Node }
