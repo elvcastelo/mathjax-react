@@ -1,5 +1,5 @@
 {
-  "name": "react-mathjax",
+  "name": "mathjax-react",
   "version": "1.0.0",
   "description": "Implementation of MathJax using React",
   "scripts": {
