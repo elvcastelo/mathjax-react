@@ -1,5 +1,5 @@
 {
-  "name": "mathjax-react",
+  "name": "@elvcastelo/mathjax-react",
   "version": "1.0.0",
   "description": "Implementation of MathJax using React",
   "scripts": {
@@ -25,5 +25,16 @@
     "mathjax"
   ],
   "author": "Emanuel Castelo <eliaslvcastelo@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elvcastelo/mathjax-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/elvcastelo/mathjax-react/issues"
+  },
+  "homepage": "https://github.com/elvcastelo/mathjax-react#readme"
 }

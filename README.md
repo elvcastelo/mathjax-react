@@ -2,6 +2,10 @@
 
 A React component for MathJax.
 
+## Installing
+
+``` npm install @elvcastelo/mathjax-react --save ```
+
 ## Usage
 
 ```jsx
