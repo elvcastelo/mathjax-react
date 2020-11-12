@@ -45,7 +45,7 @@ class Node extends React.Component {
     formatContent(content) {
         const contentSplits = content.split('\n');
         return (
-            <p>
+            <p ref={this.contentRef}>
                 {contentSplits.map((split) => (
                     <>
                         {split}
@@ -69,8 +69,8 @@ class Node extends React.Component {
         }
 
         return (
-            <div className="mathjax-component" ref={this.contentRef}>
-                { content}
+            <div className="mathjax-component">
+                { contentComponent}
             </div>
         );
     }

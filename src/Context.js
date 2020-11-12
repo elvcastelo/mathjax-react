@@ -26,7 +26,14 @@ class Context extends React.Component {
     }
 
     onLoad() {
-        window.MathJax.config.tex.inlineMath = [['$', '$']];
+        const { options } = this.props;
+        if (options) {
+            window.MathJax.config.tex = {
+                packages: ['base', 'ams', 'newcommand', 'noundefined', 'require', 'autoload', 'configmacros'],
+                ...options
+            };
+        }
+
         window.MathJax.startup.getComponents();
 
         const value = this.context;
@@ -61,6 +68,10 @@ class Context extends React.Component {
 
 Context.propTypes = {
     script: PropTypes.string,
+    options: PropTypes.shape({
+        inlineMath: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)),
+
+    }),
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node
