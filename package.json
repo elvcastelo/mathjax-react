@@ -10,12 +10,15 @@
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
+    "eslint": "^7.13.0",
+    "eslint-plugin-react": "^7.21.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "main": "lib/index.js",
   "dependencies": {
-    "load-script": "^1.0.0"
+    "load-script": "^1.0.0",
+    "prop-types": "^15.7.2"
   },
   "keywords": [
     "react",
