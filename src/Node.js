@@ -27,25 +27,27 @@ class Node extends React.Component {
     }
 
     typesetClear() {
+        const { current } = this.contentRef;
         const value = this.context;
-        value.MathJax.typesetClear([this.contentRef.current]);
+        value.MathJax.typesetClear([current]);
     }
 
     typeset(forceUpdate) {
+        const { current } = this.contentRef;
         const value = this.context;
+
         this.checkForMathJax();
 
         if (forceUpdate) {
-            this.typesetClear();
+            this.typesetClear([current]);
         }
-
-        value.MathJax.typeset();
+        value.MathJax.typesetPromise([current]);
     }
 
     formatContent(content) {
         const contentSplits = content.split('\n');
         return (
-            <p ref={this.contentRef}>
+            <p>
                 {contentSplits.map((split) => (
                     <>
                         {split}
@@ -69,7 +71,7 @@ class Node extends React.Component {
         }
 
         return (
-            <div className="mathjax-component">
+            <div className="mathjax-component" ref={this.contentRef}>
                 { contentComponent}
             </div>
         );

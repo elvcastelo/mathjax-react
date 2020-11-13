@@ -17,6 +17,18 @@ class Context extends React.Component {
     componentDidMount() {
         const value = this.context;
         const { script } = this.props;
+        const { options } = this.props;
+
+        if (options) {
+            window.MathJax = {
+                tex: {
+                    ...options
+                },
+                startup: {
+                    typeset: false
+                }
+            };
+        }
 
         if (!script) {
             loadScript(value.script, this.onLoad);
@@ -26,16 +38,6 @@ class Context extends React.Component {
     }
 
     onLoad() {
-        const { options } = this.props;
-        if (options) {
-            window.MathJax.config.tex = {
-                packages: ['base', 'ams', 'newcommand', 'noundefined', 'require', 'autoload', 'configmacros'],
-                ...options
-            };
-        }
-
-        window.MathJax.startup.getComponents();
-
         const value = this.context;
         this.setState({
             script: value.script,
