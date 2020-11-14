@@ -72,7 +72,19 @@ Context.propTypes = {
     script: PropTypes.string,
     options: PropTypes.shape({
         inlineMath: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)),
-
+        packages: PropTypes.arrayOf(PropTypes.string),
+        displayMath: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.string)),
+        processEscapes: PropTypes.bool,
+        processEnvironments: PropTypes.bool,
+        processRefs: PropTypes.bool,
+        tags: PropTypes.string,
+        tagSide: PropTypes.string,
+        tagIndent: PropTypes.string,
+        useLabelIds: PropTypes.bool,
+        multlineWidth: PropTypes.string,
+        maxMacros: PropTypes.number,
+        maxBuffer: PropTypes.number,
+        formatError: PropTypes.func
     }),
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
